@@ -1,0 +1,1 @@
+export { ImpressumSubsection } from './ImpressumSubsection';

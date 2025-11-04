@@ -1,0 +1,1 @@
+export { StartseiteDesktop } from "./StartseiteDesktop";
