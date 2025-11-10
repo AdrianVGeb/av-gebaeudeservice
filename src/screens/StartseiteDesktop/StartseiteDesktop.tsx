@@ -20,7 +20,21 @@ const navigationLinks = [
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    const offset = id === 'ihre-ansprechpartner' ? -100 : 0;
+    const isMobile = window.innerWidth < 768;
+    let offset = 0;
+
+    if (isMobile) {
+      if (id === 'ihre-ansprechpartner') {
+        offset = -95;
+      } else if (id === 'uber-uns' || id === 'leistungen') {
+        offset = -95;
+      }
+    } else {
+      if (id === 'ihre-ansprechpartner') {
+        offset = -100;
+      }
+    }
+
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
     window.scrollTo({ top: elementPosition, behavior: 'smooth' });
   }
