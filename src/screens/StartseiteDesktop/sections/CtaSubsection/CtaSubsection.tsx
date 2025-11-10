@@ -96,7 +96,8 @@ export const CtaSubsection = (): JSX.Element => {
               onClick={() => {
                 const element = document.getElementById('ihre-ansprechpartner');
                 if (element) {
-                  const offset = -100;
+                  const isMobile = window.innerWidth < 768;
+                  const offset = isMobile ? -60 : -100;
                   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset + offset;
                   window.scrollTo({ top: elementPosition, behavior: 'smooth' });
                 }
