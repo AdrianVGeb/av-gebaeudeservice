@@ -27,7 +27,7 @@ const scrollToSection = (id: string) => {
       if (id === 'ihre-ansprechpartner') {
         offset = -60;
       } else if (id === 'uber-uns' || id === 'leistungen') {
-        offset = -60;
+        offset = -45;
       }
     } else {
       if (id === 'ihre-ansprechpartner') {
